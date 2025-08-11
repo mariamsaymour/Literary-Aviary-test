@@ -1,0 +1,1487 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  
+  /* Updated primary colors for vintage brown theme */
+  --primary: #3D2B1F;
+  --primary-foreground: #F5F0EB;
+  --secondary: #F5F0EB;
+  --secondary-foreground: #3D2B1F;
+  
+  /* Warm beige/sepia instead of grey */
+  --muted: #F0E6DD;
+  --muted-foreground: #8B7355;
+  --accent: #E8DDD5;
+  --accent-foreground: #3D2B1F;
+  
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  
+  /* Warm borders instead of grey */
+  --border: rgba(61, 43, 31, 0.15);
+  --input: transparent;
+  --input-background: #F8F4F1;
+  --switch-background: #D4C4B8;
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  
+  /* Vintage brown sidebar theme */
+  --sidebar: #F5F0EB;
+  --sidebar-foreground: #3D2B1F;
+  --sidebar-primary: #3D2B1F;
+  --sidebar-primary-foreground: #F5F0EB;
+  --sidebar-accent: #E8DDD5;
+  --sidebar-accent-foreground: #3D2B1F;
+  --sidebar-border: #D4C4B8;
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Literary Aviary Color Palette - Enhanced with vintage browns */
+  --sidebar-bg: #e4dede;
+  --primary-text: #341818;
+  --secondary-text: #5a3636;
+  --main-bg: #FFF8F2;
+  --main-border: #f0ebe8;
+
+  /* Vintage Brown Color Palette */
+  --vintage-brown-darkest: #2C1810;
+  --vintage-brown-dark: #3D2B1F;
+  --vintage-brown-medium: #5A4435;
+  --vintage-brown-light: #8B7355;
+  --vintage-brown-lightest: #B8A082;
+  
+  /* Warm Beige/Sepia Palette */
+  --warm-beige-lightest: #FAF7F4;
+  --warm-beige-light: #F5F0EB;
+  --warm-beige-medium: #E8DDD5;
+  --warm-beige-dark: #D4C4B8;
+  --warm-beige-darkest: #C0A896;
+
+  /* Updated Mood Color Palette - New Figma Colors */
+  --mood-love: #DB73B0;
+  --mood-joy: #DF8D3B;
+  --mood-surprise: #A7B75F;
+  --mood-calm: #8BB0B1;
+  --mood-sadness: #7681C2;
+  --mood-fear: #8A5F97;
+  --mood-anger: #CB5656;
+
+  /* Dropdown colors - warm vintage theme */
+  --dropdown-bg: var(--warm-beige-lightest);
+  --dropdown-hover: var(--warm-beige-medium);
+  --dropdown-text: var(--vintage-brown-dark);
+  --dropdown-border: var(--warm-beige-dark);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+
+  /* Dark mode adjustments */
+  --sidebar-bg: #2a2424;
+  --primary-text: #f5f0f0;
+  --secondary-text: #d4c4c4;
+  --main-bg: #1c1918;
+  --main-border: #2a2424;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Crimson Text', serif;
+  }
+}
+
+/**
+ * Base typography with Literary Aviary fonts
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: 'Cormorant', serif;
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-family: 'Cormorant', serif;
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-family: 'Crimson Text', serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    blockquote {
+      font-family: 'Cormorant', serif;
+      font-style: italic;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Literary Aviary Specific Styles */
+.literary-sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--primary-text);
+}
+
+.literary-main-bg {
+  background-color: var(--main-bg);
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(52, 24, 24, 0.02) 2%, transparent 2%),
+    radial-gradient(circle at 75px 75px, rgba(52, 24, 24, 0.015) 1.5%, transparent 1.5%);
+  background-size: 50px 50px, 100px 100px;
+  background-position: 0 0, 25px 25px;
+}
+
+.literary-title {
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  color: var(--primary-text);
+}
+
+.literary-description {
+  font-family: 'Crimson Text', serif;
+  color: var(--secondary-text);
+}
+
+.literary-quote {
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  color: var(--primary-text);
+}
+
+.literary-label {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-text);
+}
+
+/* Enhanced dropdown styling with vintage colors */
+.literary-dropdown {
+  background-color: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 8px 25px rgba(61, 43, 31, 0.15);
+  color: var(--dropdown-text);
+  font-family: 'Crimson Text', serif;
+  min-width: 240px;
+}
+
+.literary-dropdown [data-radix-select-item] {
+  color: var(--dropdown-text);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'Crimson Text', serif;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.literary-dropdown [data-radix-select-item]:hover,
+.literary-dropdown [data-radix-select-item][data-highlighted] {
+  background-color: var(--dropdown-hover);
+  color: var(--dropdown-text);
+  outline: none;
+}
+
+.literary-dropdown [data-radix-select-item][data-state="checked"] {
+  background-color: var(--dropdown-hover);
+  color: var(--dropdown-text);
+  font-weight: 500;
+}
+
+/* Enhanced mood-based card styling with proper colors - NO GREYSCALE */
+.mood-card {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+}
+
+.mood-card:hover:not(.selected):not(.dimmed) {
+  transform: translateY(-1px) scale(1.025);
+  animation: cardBreathing 3s ease-in-out infinite;
+}
+
+.mood-card.selected {
+  transform: scale(1.08);
+  animation: selectedBreathing 3.5s ease-in-out infinite;
+}
+
+.mood-card.dimmed {
+  opacity: 0.4;
+  /* Removed greyscale filter */
+}
+
+/* Gentle breathing for card hover */
+@keyframes cardBreathing {
+  0% { 
+    transform: translateY(-1px) scale(1.025);
+  }
+  50% { 
+    transform: translateY(-3px) scale(1.05);
+  }
+  100% { 
+    transform: translateY(-1px) scale(1.025);
+  }
+}
+
+/* Breathing for selected cards */
+@keyframes selectedBreathing {
+  0% { 
+    transform: scale(1.08);
+    filter: brightness(1.05);
+  }
+  50% { 
+    transform: scale(1.11);
+    filter: brightness(1.1);
+  }
+  100% { 
+    transform: scale(1.08);
+    filter: brightness(1.05);
+  }
+}
+
+/* Enhanced bird flight animations */
+.circle-node {
+  transform-origin: center center;
+  will-change: transform, opacity;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.circle-node:not(:hover) {
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Natural bird flight path animation */
+@keyframes birdFlight {
+  0% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+  25% { 
+    transform: translateY(-3px) rotate(2deg) scale(1.02); 
+  }
+  50% { 
+    transform: translateY(-6px) rotate(0deg) scale(1.05); 
+  }
+  75% { 
+    transform: translateY(-3px) rotate(-2deg) scale(1.02); 
+  }
+  100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+}
+
+/* Gentle breathing animation for serene hover effect */
+@keyframes gentleBreathing {
+  0% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.06);
+    opacity: 0.92;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Subtle wing flutter effect during shuffle */
+@keyframes wingFlutter {
+  0%, 100% { 
+    transform: scaleX(1) scaleY(1); 
+  }
+  25% { 
+    transform: scaleX(1.05) scaleY(0.98); 
+  }
+  50% { 
+    transform: scaleX(0.98) scaleY(1.05); 
+  }
+  75% { 
+    transform: scaleX(1.02) scaleY(0.99); 
+  }
+}
+
+/* Apply flight animations during shuffle */
+.bird-shuffling {
+  animation: birdFlight 0.8s ease-in-out;
+}
+
+.bird-shuffling .mood-svg,
+.bird-shuffling svg {
+  animation: wingFlutter 0.4s ease-in-out infinite;
+}
+
+/* Enhanced hover animation for birds - Gentle breathing effect */
+.circle-node:hover {
+  animation: gentleBreathing 2.5s ease-in-out infinite;
+}
+
+/* Smooth shuffle button icon rotation */
+.shuffle-icon {
+  transition: transform 0.3s ease;
+}
+
+.shuffle-icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Bird rotation styles with new colors */
+.bird-rotated {
+  transition: transform 0.3s ease;
+}
+
+.bird-rotated:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Enhanced SVG styling for mood-based colors */
+.mood-svg {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.mood-svg:hover {
+  filter: saturate(1.15) brightness(1.05);
+  animation: svgBreathing 2.5s ease-in-out infinite;
+}
+
+/* Subtle breathing effect for SVG birds */
+@keyframes svgBreathing {
+  0% { 
+    transform: scale(1);
+    filter: saturate(1.15) brightness(1.05);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: saturate(1.3) brightness(1.12);
+  }
+  100% { 
+    transform: scale(1);
+    filter: saturate(1.15) brightness(1.05);
+  }
+}
+
+/* Breathing bird class for SVG images */
+.breathing-bird {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.breathing-bird:hover {
+  animation: breathingPulse 3s ease-in-out infinite;
+}
+
+/* Enhanced breathing animation - more visible but still serene */
+@keyframes breathingPulse {
+  0% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% { 
+    transform: scale(1.025);
+    opacity: 0.96;
+  }
+  50% { 
+    transform: scale(1.04);
+    opacity: 0.94;
+  }
+  75% { 
+    transform: scale(1.025);
+    opacity: 0.96;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* BIRD MOOD COLORS - Using CSS mask approach for better color control */
+
+/* SVG Bird Container */
+.svg-bird-container {
+  position: relative;
+}
+
+/* Fallback image - hide when mask is supported */
+.fallback-img {
+  display: none;
+}
+
+/* Show fallback when mask is not supported */
+@supports not (mask: url()) {
+  .fallback-img {
+    display: block;
+  }
+}
+
+/* Direct mood color application */
+.mood-love {
+  color: var(--mood-love) !important;
+}
+
+.mood-joy {
+  color: var(--mood-joy) !important;
+}
+
+.mood-surprise {
+  color: var(--mood-surprise) !important;
+}
+
+.mood-calm {
+  color: var(--mood-calm) !important;
+}
+
+.mood-sadness {
+  color: var(--mood-sadness) !important;
+}
+
+.mood-fear {
+  color: var(--mood-fear) !important;
+}
+
+.mood-anger {
+  color: var(--mood-anger) !important;
+}
+
+/* Circular cards with rotation support */
+.circular-container {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+  transform-origin: center center;
+}
+
+/* Vintage brown filter dropdowns */
+.filter-dropdown {
+  font-family: 'Crimson Text', serif;
+  background: var(--warm-beige-lightest);
+  border-radius: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--warm-beige-dark);
+  box-shadow: 0 1px 3px rgba(61, 43, 31, 0.1);
+}
+
+/* Smooth loading animation for SVGs */
+.svg-loading {
+  animation: svgPulse 2s ease-in-out infinite;
+}
+
+@keyframes svgPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Selection indicator animation */
+.selection-indicator {
+  animation: selectionPulse 2s ease-in-out infinite;
+}
+
+@keyframes selectionPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced audio visualization animation */
+.audio-bars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.audio-bar {
+  width: 2px;
+  border-radius: 1px;
+  animation: audioWave 0.6s ease-in-out infinite;
+  background: currentColor;
+  opacity: 0.8;
+}
+
+.audio-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.audio-bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.audio-bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes audioWave {
+  0%, 100% {
+    height: 6px;
+    opacity: 0.6;
+  }
+  50% {
+    height: 16px;
+    opacity: 1;
+  }
+}
+
+/* New Beautiful Audio Waveform Animation */
+@keyframes audioWaveForm {
+  0%, 100% {
+    transform: scaleY(0.3);
+    opacity: 0.6;
+  }
+  25% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.8);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scaleY(1.5);
+    opacity: 1;
+  }
+}
+
+/* Individual wave bars with different animations */
+.waveform-bar:nth-child(1) { animation: audioWaveForm 1.2s ease-in-out infinite 0s; }
+.waveform-bar:nth-child(2) { animation: audioWaveForm 1.2s ease-in-out infinite 0.1s; }
+.waveform-bar:nth-child(3) { animation: audioWaveForm 1.2s ease-in-out infinite 0.2s; }
+.waveform-bar:nth-child(4) { animation: audioWaveForm 1.2s ease-in-out infinite 0.3s; }
+.waveform-bar:nth-child(5) { animation: audioWaveForm 1.2s ease-in-out infinite 0.4s; }
+.waveform-bar:nth-child(6) { animation: audioWaveForm 1.2s ease-in-out infinite 0.5s; }
+.waveform-bar:nth-child(7) { animation: audioWaveForm 1.2s ease-in-out infinite 0.6s; }
+.waveform-bar:nth-child(8) { animation: audioWaveForm 1.2s ease-in-out infinite 0.7s; }
+.waveform-bar:nth-child(9) { animation: audioWaveForm 1.2s ease-in-out infinite 0.8s; }
+.waveform-bar:nth-child(10) { animation: audioWaveForm 1.2s ease-in-out infinite 0.9s; }
+.waveform-bar:nth-child(11) { animation: audioWaveForm 1.2s ease-in-out infinite 1.0s; }
+.waveform-bar:nth-child(12) { animation: audioWaveForm 1.2s ease-in-out infinite 1.1s; }
+
+/* Improved audio wave animation for sidebar */
+@keyframes audioWaveLarge {
+  0%, 100% {
+    height: 8px;
+    opacity: 0.5;
+  }
+  50% {
+    height: 24px;
+    opacity: 0.9;
+  }
+}
+
+.audio-wave-large {
+  animation: audioWaveLarge 0.6s ease-in-out infinite;
+}
+
+/* Interactive Audio Play Button */
+.audio-play-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.audio-play-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(61, 43, 31, 0.15);
+}
+
+.audio-play-button:active {
+  transform: scale(0.98);
+}
+
+/* Pulse animation for play button when not playing */
+@keyframes audioPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.audio-pulse-indicator {
+  animation: audioPulse 2s ease-in-out infinite;
+}
+
+/* Dimming animation - NO GREYSCALE */
+.bird-dimmed {
+  opacity: 0.4;
+  /* Removed greyscale and brightness filters */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bird-selected {
+  filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 8px currentColor);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover ring animation with new colors */
+@keyframes hoverRing {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Custom Literary Aviary Scrollbar Styling */
+.literary-sidebar-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Webkit Scrollbar Styling - Matches Literary Aviary Theme */
+.literary-sidebar-scroll ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.literary-sidebar-scroll ::-webkit-scrollbar-track {
+  background: #f0e6dd; /* var(--muted) */
+  border-radius: 6px;
+  margin: 6px 0;
+  border: 1px solid #e8ddd5; /* var(--accent) */
+}
+
+.literary-sidebar-scroll ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b7355 0%, #5a4435 100%); /* var(--vintage-brown-light) to var(--vintage-brown-medium) */
+  border-radius: 6px;
+  border: 2px solid #f0e6dd; /* var(--muted) */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 40px;
+}
+
+.literary-sidebar-scroll ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5a4435 0%, #3d2b1f 100%); /* var(--vintage-brown-medium) to var(--vintage-brown-dark) */
+  border-color: #e8ddd5; /* var(--accent) */
+  box-shadow: 0 2px 8px rgba(61, 43, 31, 0.3);
+  transform: scaleX(1.1);
+}
+
+.literary-sidebar-scroll ::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #3d2b1f 0%, #2c1810 100%); /* var(--vintage-brown-dark) to var(--vintage-brown-darkest) */
+  transform: scaleX(0.95);
+}
+
+.literary-sidebar-scroll ::-webkit-scrollbar-corner {
+  background: #f0e6dd; /* var(--muted) */
+  border-radius: 6px;
+}
+
+/* Firefox Scrollbar Styling */
+.literary-sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #8b7355 #f0e6dd; /* var(--vintage-brown-light) var(--muted) */
+}
+
+/* Enhanced scrollbar for better visibility and interaction */
+.literary-sidebar-scroll:hover ::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* Smooth scrollbar appearance animation */
+.literary-sidebar-scroll ::-webkit-scrollbar {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.literary-sidebar-scroll:hover ::-webkit-scrollbar {
+  opacity: 1;
+}
+
+/* Scrollbar track hover effect */
+.literary-sidebar-scroll ::-webkit-scrollbar-track:hover {
+  background: #e8ddd5; /* var(--accent) */
+}
+
+/* Sidebar Content Centering */
+.sidebar-content-container {
+  min-height: calc(100vh - 200px); /* Account for header and footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Responsive sidebar content adjustments */
+@media (min-height: 900px) {
+  .sidebar-content-container {
+    min-height: calc(100vh - 180px);
+    padding: 2rem 0;
+  }
+}
+
+@media (max-height: 700px) {
+  .sidebar-content-container {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Updated Mood-specific text shadows for enhanced readability */
+.mood-love .literary-quote {
+  text-shadow: 0 0 20px rgba(219, 115, 176, 0.3);
+}
+
+.mood-joy .literary-quote {
+  text-shadow: 0 0 20px rgba(223, 141, 59, 0.3);
+}
+
+.mood-surprise .literary-quote {
+  text-shadow: 0 0 20px rgba(167, 183, 95, 0.3);
+}
+
+.mood-calm .literary-quote {
+  text-shadow: 0 0 20px rgba(139, 176, 177, 0.3);
+}
+
+.mood-sadness .literary-quote {
+  text-shadow: 0 0 20px rgba(118, 129, 194, 0.3);
+}
+
+.mood-fear .literary-quote {
+  text-shadow: 0 0 20px rgba(138, 95, 151, 0.3);
+}
+
+.mood-anger .literary-quote {
+  text-shadow: 0 0 20px rgba(203, 86, 86, 0.3);
+}
+
+/* Clickable bird image in sidebar */
+.clickable-bird {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-bird:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Mute button styling */
+.mute-button {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.mute-button:hover {
+  opacity: 1;
+}
+
+/* Audio status in filter bar */
+.audio-status {
+  animation: audioGlow 2s ease-in-out infinite;
+}
+
+@keyframes audioGlow {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Sidebar collapse animation styles */
+.sidebar-collapsed {
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Smooth sidebar transitions */
+.sidebar-transition {
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease-in-out;
+}
+
+/* Collapsed Sidebar Styling */
+.collapsed-sidebar {
+  width: 64px;
+  background-color: #faeee6;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-right: 1px solid rgba(61, 43, 31, 0.1);
+}
+
+.collapsed-sidebar .action-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 9.02px;
+  cursor: pointer;
+}
+
+.collapsed-sidebar .action-button:hover {
+  background-color: #F2DFD3;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(61, 43, 31, 0.1);
+}
+
+.collapsed-sidebar .expand-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsed-sidebar .expand-button:hover {
+  background-color: #F2DFD3;
+  transform: scale(1.05);
+}
+
+.collapsed-sidebar .expand-button svg {
+  transition: transform 0.2s ease;
+}
+
+.collapsed-sidebar .expand-button:hover svg {
+  transform: translateX(1px);
+}
+
+/* Enhanced logo styling for collapsed state */
+.collapsed-sidebar .sidebar-logo {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(61, 43, 31, 0.1));
+}
+
+.collapsed-sidebar .sidebar-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(61, 43, 31, 0.2));
+}
+
+/* Chevron Button Hover States */
+.literary-chevron-button {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 9.02px;
+}
+
+.literary-chevron-button:hover {
+  background-color: #F2DFD3;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(61, 43, 31, 0.1);
+}
+
+.literary-chevron-button:hover svg {
+  transform: translateX(-1px);
+  color: #3d2b1f;
+}
+
+.literary-chevron-button:active {
+  transform: scale(0.98);
+  background-color: #e8ddd5;
+}
+
+/* Floating toggle button for collapsed sidebar */
+.floating-toggle {
+  backdrop-filter: blur(8px);
+  background: var(--warm-beige-lightest);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--warm-beige-dark);
+}
+
+.floating-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(61, 43, 31, 0.15);
+  background: var(--warm-beige-light);
+}
+
+/* Enhanced layout for collapsed state */
+.full-width-gallery {
+  width: 100vw;
+}
+
+/* Improved button group styling for header controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sidebar toggle button animations */
+.sidebar-toggle {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Refined Filter Header Styles - Matching Figma Design */
+.filter-clickable {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 17.5%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Cormorant', serif;
+  font-style: normal !important; /* Ensure not italic */
+}
+
+.filter-clickable:hover {
+  opacity: 0.7;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+}
+
+.filter-text {
+  font-family: 'Cormorant', serif;
+  font-style: normal !important; /* Ensure not italic */
+}
+
+.filter-text.italic {
+  font-style: italic !important; /* Only when explicitly italic */
+}
+
+/* Ensure filter header text is not italic by default */
+.filter-header * {
+  font-style: normal;
+}
+
+/* Only allow italic for specific ampersand spans */
+.filter-header span[class*="italic"] {
+  font-style: italic;
+}
+
+/* Cormorant font override for filter header - ensure not italic */
+.font-\[\'Cormorant\'\,_serif\] {
+  font-family: 'Cormorant', serif;
+  font-style: normal !important;
+}
+
+/* Override any base typography that might be making Cormorant italic */
+[class*="font-['Cormorant'"] {
+  font-style: normal !important;
+}
+
+[class*="font-['Cormorant'"] .italic,
+[class*="font-['Cormorant'"] [class*="italic"] {
+  font-style: italic !important;
+}
+
+/* Enhanced dotted underlines for Figma design match */
+[class*="text-decoration-style:dotted"] {
+  text-decoration-thickness: 1px !important;
+  text-decoration-color: currentColor;
+}
+
+/* Mobile responsive adjustments for filter header */
+@media (max-width: 768px) {
+  .filter-header .font-\[\'Cormorant\'\,_serif\] {
+    font-size: 20px !important;
+  }
+  
+  .filter-header .text-\[32px\] {
+    font-size: 20px !important;
+  }
+}
+
+/* Filter header container */
+.filter-header {
+  background: var(--main-bg);
+}
+
+/* Chevron styling - matching Figma exactly */
+.filter-chevron {
+  display: inline-block;
+  width: 6.705px;
+  height: 11.664px;
+  margin-left: 2px;
+  vertical-align: middle;
+  transform: rotate(90deg);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.filter-clickable:hover + .filter-chevron,
+.filter-clickable:hover .filter-chevron {
+  opacity: 1;
+}
+
+/* Admin Interface Styles */
+.admin-sidebar-width {
+  width: 244px;
+}
+
+.admin-sidebar-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+.admin-sidebar-desktop {
+  position: relative;
+  transform: translateX(0);
+  z-index: 30;
+}
+
+.admin-sidebar-mobile-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transform: translateX(0);
+}
+
+.admin-sidebar-mobile-closed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transform: translateX(-100%);
+}
+
+.admin-content-area {
+  margin-left: 0;
+}
+
+.admin-content-padding {
+  padding: 1.5rem;
+}
+
+.admin-content-scroll-area {
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.admin-cards-padding {
+  padding-bottom: 2rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .literary-sidebar {
+    width: 100vw;
+    height: auto;
+    max-height: 50vh;
+  }
+  
+  .circle-node {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .literary-title {
+    font-size: 20px;
+  }
+
+  .literary-quote {
+    font-size: 24px;
+  }
+
+  /* Smaller audio animation on mobile */
+  .audio-play-button {
+    transform: scale(0.9);
+  }
+
+  /* Mobile-specific gallery styles */
+  .mobile-gallery {
+    padding: 0;
+    height: calc(100vh - 80px); /* Account for mobile header */
+  }
+
+  /* Mobile modal styles */
+  .mobile-modal-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Touch-friendly bird cards on mobile */
+  .circle-node {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Mobile header improvements */
+  .mobile-header {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Prevent zoom on double tap for mobile modal */
+  .mobile-modal-content * {
+    touch-action: manipulation;
+  }
+
+  /* Better mobile filter header */
+  .filter-header {
+    padding: 0.75rem 1rem;
+    background: var(--main-bg);
+  }
+
+  /* Responsive bird visualization on mobile */
+  .bird-gallery-mobile {
+    padding: 1rem;
+    min-height: calc(100vh - 160px);
+  }
+
+  /* Mobile Modal Overrides - Ensure modal appears on top */
+  [data-radix-dialog-overlay] {
+    z-index: 9999 !important;
+  }
+
+  [data-radix-dialog-content] {
+    z-index: 10000 !important;
+  }
+
+  /* Mobile Filter Modal Improvements */
+  .mobile-filter-modal {
+    width: calc(100vw - 2rem) !important;
+    max-width: 349.5px !important;
+    max-height: 85vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  /* Smooth scrolling for mobile modal content */
+  .mobile-filter-modal .overflow-y-auto {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: thin !important;
+  }
+
+  /* Ensure body can scroll when modal is closed */
+  body:not(.modal-open) {
+    overflow: auto !important;
+  }
+
+  /* Prevent body scroll when modal is open to avoid double scrolling */
+  body.modal-open {
+    overflow: hidden !important;
+  }
+
+  /* Very small screen text wrapping and adjustments */
+  @media (max-width: 320px) {
+    .mobile-text-wrap {
+      white-space: normal !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      text-align: center !important;
+    }
+    
+    .mobile-filter-modal {
+      width: calc(100vw - 1rem) !important;
+      font-size: 90% !important;
+    }
+  }
+
+  /* iPhone SE specific adjustments */
+  @media (max-width: 375px) and (max-height: 667px) {
+    .mobile-filter-modal {
+      max-height: 90vh !important;
+    }
+    
+    .mobile-text-wrap {
+      font-size: 18px !important;
+      line-height: 1.3 !important;
+    }
+  }
+
+  /* Mobile Modal Specific Styling */
+  .mobile-bird-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    z-index: 10000 !important;
+    background: white !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  /* Admin Interface Mobile Styles */
+  .admin-sidebar-desktop {
+    display: none;
+  }
+
+  .admin-content-area {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .admin-content-padding {
+    padding: 1rem;
+  }
+
+  .admin-content-scroll-area {
+    height: calc(100vh - 240px); /* Extra space for new search bar */
+  }
+
+  .admin-cards-padding {
+    padding-bottom: 1rem;
+  }
+
+  /* Mobile Header and Bottom Navigation */
+  .mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 40;
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 40;
+  }
+
+  /* Filter controls should stack on mobile */
+  .admin-filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .admin-filters > div {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Mobile search bar improvements */
+  .mobile-search-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .mobile-search-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  /* Filter modal styling on mobile */
+  .filter-modal-mobile {
+    margin: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* Responsive table on mobile */
+  .table-responsive {
+    font-size: 0.75rem;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  /* Enhanced bird quote cards on mobile */
+  .bird-quote-card {
+    min-height: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .bird-quote-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(61, 43, 31, 0.15);
+  }
+
+  .bird-quote-card-selected {
+    box-shadow: 0 0 0 2px #66800b;
+  }
+
+  /* Card grid responsive improvements */
+  .admin-cards-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .admin-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .admin-cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .admin-cards-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .admin-sidebar-mobile-open,
+  .admin-sidebar-mobile-closed {
+    position: relative;
+    transform: translateX(0);
+  }
+
+  .admin-content-area {
+    padding-left: 0;
+  }
+}
