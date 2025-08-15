@@ -10,7 +10,7 @@ import { defaultBirdsData } from './data/defaultBirds';
 import { createNavigationHandlers } from './utils/navigation';
 import { useAuth } from './hooks/useAuth';
 import { AppMode } from './constants/app';
-import { Toaster } from 'sonner@2.0.3';
+import { Toaster } from "sonner";  // ✅ Correct - just the package name
 
 export default function App() {
   const [birds, setBirds] = useState<BirdData[]>([]);

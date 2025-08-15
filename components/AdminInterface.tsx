@@ -15,12 +15,12 @@ import { ScrollArea } from './ui/scroll-area';
 import { Separator } from './ui/separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 import { Checkbox } from './ui/checkbox';
-import { Plus, Edit2, Trash2, Download, Upload, Eye, Save, X, LogOut, Info, Grid3X3, Table, FileText, Users, Settings2, ArrowUpDown, ArrowUp, ArrowDown, FileX, Merge, Copy, Check, AlertTriangle, EyeOff, BarChart3, ArrowUpLeft, Menu, UserPlus, Lock, Mail, Shield, User as UserIcon, Bird, Clock, Heart, Globe, Feather, Clock, Book, PenTool, Compass, Bookmark, Search, Filter, Columns } from 'lucide-react';
+import { Plus, Edit2, Trash2, Download, Upload, Eye, Save, X, LogOut, Info, Grid, Table, FileText, Users, Settings2, ArrowUpDown, ArrowUp, ArrowDown, FileX, Merge, Copy, Check, AlertTriangle, EyeOff, BarChart3, ArrowUpLeft, Menu, UserPlus, Lock, Mail, Shield, User as UserIcon, Bird, Clock, Heart, Globe, Feather, Book, PenTool, Compass, Bookmark, Search, Filter, Columns } from 'lucide-react';
 import svgPaths from '../imports/svg-9j2ik11zho';
 import desktopSvgPaths from '../imports/svg-zv29thfbyg';
 import columnsButtonSvgPaths from '../imports/svg-am6aq9ttj6';
 import sidebarSvgPaths from '../imports/svg-b06h4eok30';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from 'recharts';
 import { getBirdFamily, getTopFamilies, getFamilyDisplayName, getFamilyLatinName } from '../utils/birdTaxonomy';
 
@@ -2821,7 +2821,7 @@ export function AdminInterface({ birds, onBirdsUpdate, onClose, onLogout }: Admi
                               : 'text-[#856658] hover:bg-transparent'
                           }`}
                         >
-                          <Grid3X3 className="w-[14.4px] h-[14.4px]" strokeWidth="1.44" />
+                          <Grid className="w-[14.4px] h-[14.4px]" strokeWidth="1.44" />
                         </Button>
                         <Button
                           variant="ghost"

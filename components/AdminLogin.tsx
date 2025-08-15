@@ -5,7 +5,7 @@ import { Label } from './ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Eye, EyeOff, Lock, User, Mail, ArrowLeft } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { UserManager } from '../utils/userManager';
 import { LoginCredentials, CreateUserRequest } from '../types/user';
 
