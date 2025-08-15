@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Literary Aviary</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS variables for the app -->
+    <style>
+      :root {
+        --sidebar-bg: #faeee6;
+        --primary-text: #160e0c;
+        --main-border: #e8ddd5;
+      }
+      
+      /* Audio waveform animation */
+      @keyframes audioWaveForm {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(1.5); }
+      }
+      
+      /* Literary sidebar styling */
+      .literary-sidebar {
+        background: linear-gradient(135deg, #faeee6 0%, #f5ede4 100%);
+        border-right: 1px solid #e8ddd5;
+      }
+      
+      .literary-main-bg {
+        background: #fff8f2;
+      }
+      
+      /* Collapsed sidebar styling */
+      .collapsed-sidebar {
+        width: 64px;
+        background: linear-gradient(135deg, #faeee6 0%, #f5ede4 100%);
+        border-right: 1px solid #e8ddd5;
+      }
+      
+      /* Hover effects for interactive elements */
+      .action-button {
+        border-radius: 9px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      
+      .action-button:hover {
+        background-color: #F2DFD3;
+        transform: translateY(-1px);
+      }
+      
+      .expand-button:hover {
+        background-color: rgba(242, 223, 211, 0.5);
+      }
+      
+      /* Smooth transitions for sidebar collapse/expand */
+      .literary-sidebar {
+        transition: width 0.5s ease-in-out;
+      }
+      
+      /* Custom scrollbar for sidebar */
+      .literary-sidebar-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #c9bdba transparent;
+      }
+      
+      .literary-sidebar-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      .literary-sidebar-scroll::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      .literary-sidebar-scroll::-webkit-scrollbar-thumb {
+        background-color: #c9bdba;
+        border-radius: 3px;
+      }
+      
+      .literary-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+        background-color: #b5a8a4;
+      }
+      
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .bird-gallery-mobile {
+          padding: 10px;
+        }
+      }
+      
+      /* Clickable bird hover effect */
+      .clickable-bird {
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+      
+      .clickable-bird:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Drawer customizations */
+      .drawer-content {
+        background: #faeee6 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>
